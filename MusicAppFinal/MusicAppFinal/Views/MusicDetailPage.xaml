@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAppFinal.Views.MusicDetailPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame BackgroundColor="White"  HasShadow="False" Padding="0" Margin="0" HeightRequest="50" >
+                <Image Source="IMG_0078.JPG" Aspect="AspectFill"
+                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
