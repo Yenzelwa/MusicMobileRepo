@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Plugin.MediaManager.Forms.Android;
 
 namespace MusicAppFinal.Droid
 {
@@ -13,6 +14,7 @@ namespace MusicAppFinal.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+            VideoViewRenderer.Init();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 

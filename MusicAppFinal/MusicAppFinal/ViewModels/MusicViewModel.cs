@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static MusicAppFinal.Models.Music;
 
 namespace MusicAppFinal.ViewModels
 {
@@ -12,24 +13,46 @@ namespace MusicAppFinal.ViewModels
         public  MusicViewModel()
         {
 
-            Music = new List<Music>();
-            Music.Add(new Music
+            //People = new List<PeoplePair>
+            //{
+            //    new PeoplePair(new Person(), new Person()),
+            //    new PeoplePair(new Person(), new Person()),
+            //    new PeoplePair(new Person(), new Person()),
+            //    new PeoplePair(new Person(), null)
+            //};
+            Music = new List<MusicPair>{
+                new MusicPair ( new Music
             {
                  CollectionArtistName = "Sanele Jili",
                  CollectionTitle = "Madumakude Very Nice",
                  CollectionImage = "IMG_0074.JPG",
                  CollectionPrice = 20
-            });
-            Music.Add(new Music
+            },
+            new Music
             {
                 CollectionArtistName = "Nokukhanya Dumakude",
                 CollectionTitle = "Majili Very  Bad",
                 CollectionImage = "IMG_0078.JPG",
                 CollectionPrice = 10
-            });
+            }),
+                   new MusicPair ( new Music
+            {
+                 CollectionArtistName = "Sanele Jili 2",
+                 CollectionTitle = "Madumakude Very Nice",
+                 CollectionImage = "IMG_0074.JPG",
+                 CollectionPrice = 20
+            },
+            new Music
+            {
+                CollectionArtistName = "Nokukhanya Dumakude 2",
+                CollectionTitle = "Majili Very  Bad",
+                CollectionImage = "IMG_0078.JPG",
+                CollectionPrice = 10
+            })
+            };
         }
 
-        public List<Music> Music { get; set; }
+        public List<MusicPair> Music { get; set; }
 
 
 

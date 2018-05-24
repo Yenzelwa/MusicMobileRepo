@@ -15,7 +15,7 @@ namespace MusicAppFinal.Views
 		public MusicDetailPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new MusicDetailViewModel();
+         //   BindingContext = new MusicDetailViewModel();
         }
 	}
 }

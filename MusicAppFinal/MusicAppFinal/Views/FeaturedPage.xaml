@@ -3,62 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicAppFinal.Views.FeaturedPage" 
             xmlns:Controls="clr-namespace:MusicAppFinal.Layout;assembly=HorizontalList"
+          
+           
              x:Name="BrowseFeaturedPage">
 
-    <!--<Controls:HorizontalList ItemsSource="{Binding People}" ListOrientation="Horizontal">
-        <Controls:HorizontalList.ItemTemplate>
-            <DataTemplate>
-                <Label Text="test" Grid.Row="0" YAlign="Center" />
-            </DataTemplate>
-        </Controls:HorizontalList.ItemTemplate>
-    </Controls:HorizontalList>-->
-        <!--<ContentPage.Content>
-        <Grid x:Name="gridLayout">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <StackLayout> 
-            </StackLayout>
-         
-        </Grid>
-    </ContentPage.Content>-->
-    <!--<StackLayout VerticalOptions="FillAndExpand" Padding="50">
-        <Frame>
-            <Label Text="tdtt"
-        HorizontalOptions="Center"
-        Font="Bold,Large">
-                <Label.TextColor>
-                    <OnPlatform x:TypeArguments="Color"
-             iOS="Accent"
-             WinPhone="Accent"
-             Android="#afcca6" />
-                </Label.TextColor>
-            </Label>
-        </Frame>
-
-        <ListView ItemsSource="{Binding AlbumModel}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-
-                    <ImageCell ImageSource ="{Binding IconSource.Result}"
-                     Text="{Binding AlbumModel.Name}"
-                     Detail="{Binding AlbumModel.Price, StringFormat='{0:C}'}"
-                     Command="{Binding NavigateToProduct}"
-                     CommandParameter="{Binding .}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>-->
-    <!--<ScrollView Margin="0,20,0,20">
-        <local:WrapLayout x:Name="wrapLayout" />
-    </ScrollView>-->
-
     <Grid Padding="10">
+       
         <ListView SeparatorVisibility="Default" ItemsSource="{Binding Music}" HasUnevenRows="True" HorizontalOptions="Fill">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -72,7 +22,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapped_ViewMusic"/>
                             </StackLayout.GestureRecognizers>
-                            <Frame  Padding="1" BackgroundColor="White" HasShadow="True" OutlineColor="#bbb" >
+                            <Frame  Padding="1" BackgroundColor="White" HasShadow="True" OutlineColor="#bbb" BindingContext="{Binding Item1}"  >
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="100"/>
@@ -97,7 +47,38 @@
                                                 <ColumnDefinition Width="100"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <Button Grid.Column="1" Text="Detail" VerticalOptions="Center" BorderRadius="16" FontSize="10" HeightRequest="34" BorderWidth="0"/>
+                                            <Button Grid.Column="1" Clicked="BtnIncrement_OnClicked" Text="Add ToCart" VerticalOptions="Center" BorderRadius="16" FontSize="10" HeightRequest="34" BorderWidth="0"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+
+                            <Frame Grid.Column="2"  Padding="1" BackgroundColor="White" HasShadow="True" OutlineColor="#bbb" BindingContext="{Binding Item2}"  >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Frame BackgroundColor="White"  HasShadow="False" Padding="0" Margin="0" >
+                                        <Image Source="{Binding CollectionImage}" Aspect="AspectFill"
+                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                                    </Frame>
+
+                                    <StackLayout Grid.Row="1" Padding="5,0,5,5" Spacing="2">
+
+                                        <Label Text="{Binding CollectionArtistName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16" LineBreakMode="TailTruncation" 
+                           TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Text="{Binding CollectionTitle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" LineBreakMode="TailTruncation"
+                           TextColor="Bisque"/>
+                                        <Label Text="{Binding CollectionPrice}" FontSize="12" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center" LineBreakMode="TailTruncation"/>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Grid.Column="1" x:Name="test" Clicked="BtnIncrement_OnClicked" Text="Add ToCart" VerticalOptions="Center" BorderRadius="16" FontSize="10" HeightRequest="34" BorderWidth="0"/>
                                         </Grid>
                                     </StackLayout>
                                 </Grid>

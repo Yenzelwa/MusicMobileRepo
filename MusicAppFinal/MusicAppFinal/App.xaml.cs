@@ -8,37 +8,30 @@ namespace MusicAppFinal
 {
 	public partial class App : Application
 	{
+        public static bool IsWindows10 { get; set; }
+
         public App()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
 
-			SetMainPage();
-		}
-
-		public static void SetMainPage()
-		{
-            Current.MainPage = new TabbedPage
-            {
-                Children =
-                {
-                          new NavigationPage(new FeaturedPage())
-                    {
-                        Title = "FEATURED",
-                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new BlogPage())
-                    {
-                        Title = "BLOG",
-                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
-                    },
-                    new NavigationPage(new MyMusicPage())
-                    {
-                        Title = "MY MUSIC",
-                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
-
-                    },
-                }
-            };
+            MainPage =  new RootPage();
+           
         }
+
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
+
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    
 	}
 }

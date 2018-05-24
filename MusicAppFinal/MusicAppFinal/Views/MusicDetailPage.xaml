@@ -1,15 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MusicAppFinal.Views"
              x:Class="MusicAppFinal.Views.MusicDetailPage">
-    <ContentPage.Content>
-        <StackLayout >
-            <Frame BackgroundColor="White"  HasShadow="False" Padding="0" Margin="0" HeightRequest="50" >
-                <Image Source="IMG_0078.JPG" Aspect="AspectFill"
-                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
+  
+     <Grid>
+         <Grid.RowDefinitions>
+             <RowDefinition Height="Auto"></RowDefinition>
+             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:AspectRatioContainer AspectRation="200">
+        <Image Aspect="AspectFill" Source="IMG_0078.JPG"  HorizontalOptions="Fill"  HeightRequest="260"/>
+        </local:AspectRatioContainer>
+        <Frame  Grid.Row="1" BackgroundColor="White"  HasShadow="True"  Margin="20,-40,20,50" >
+            <Label Margin="0,25"
+               Text="My name is Scott Hanselman."
+               LineBreakMode="WordWrap"/>
+            <Label Margin="0,25"
+               Text="My name is Scott Hanselman."
+               LineBreakMode="WordWrap"/>
+            <Button Text="Add to cart"></Button>
+            <Button Text="Procced"></Button>
             </Frame>
+
+      
+
+        <StackLayout Grid.Row="2" Padding="5,0,5,5" Spacing="2">
+    
+            <Label Text="Song name " VerticalOptions="Center" HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
+                           TextColor="Black" FontAttributes="Bold"/>
+            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
+
+            <Label Text="Song name " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
+                           TextColor="Black" FontAttributes="Bold"/>
+            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
+
+            <Label Text="Song name  " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
+                           TextColor="Black" FontAttributes="Bold"/>
+            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
+            <Label Text="Song name  " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
+                           TextColor="Black" FontAttributes="Bold"/>
+            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
+
         </StackLayout>
-    </ContentPage.Content>
+
+
+    </Grid>
+    <!--<StackLayout Orientation="Vertical" Spacing="10" Padding="10">
+            <Image Aspect="AspectFill" Source="IMG_0078.JPG" Margin="-10,-10,-10,0" MinimumHeightRequest="90"/>
+
+
+            <Label Margin="0,25"
+               Text="My name is Scott Hanselman. I'm a programmer, teacher, and speaker. I work out of my home office in Portland, Oregon for the Web Platform Team at Microsoft, but this blog, its content and opinions are my own. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web."
+               LineBreakMode="WordWrap"/>
+
+            <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     Spacing="10">
+
+                <Image x:Name="twitter" Source="twitter.png"/>
+                <Image x:Name="facebook" Source="facebook.png"/>
+                <Image x:Name="instagram" Source="instagram.png"/>
+            </StackLayout>
+
+        </StackLayout>-->
+
 </ContentPage>
 
 

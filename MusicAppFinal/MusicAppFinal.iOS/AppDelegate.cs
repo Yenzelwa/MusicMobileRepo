@@ -1,5 +1,6 @@
 ﻿
 using Foundation;
+using Plugin.MediaManager.Forms.iOS;
 using UIKit;
 
 namespace MusicAppFinal.iOS
@@ -10,7 +11,8 @@ namespace MusicAppFinal.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
-			LoadApplication(new App());
+            VideoViewRenderer.Init();
+            LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
 		}
