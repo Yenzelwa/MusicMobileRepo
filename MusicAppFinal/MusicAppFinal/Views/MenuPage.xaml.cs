@@ -22,8 +22,8 @@ namespace MusicAppFinal.Views
             InitializeComponent();
             if (!App.IsWindows10)
             {
-                BackgroundColor = Color.FromHex("#03A9F4");
-                ListViewMenu.BackgroundColor = Color.FromHex("#F5F5F5");
+                BackgroundColor = Color.FromHex("#232323");
+                ListViewMenu.BackgroundColor = Color.FromHex("#232323");
             }
             BindingContext = new BaseViewModel
             {

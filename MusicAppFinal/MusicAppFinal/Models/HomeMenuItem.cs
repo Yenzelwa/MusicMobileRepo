@@ -9,7 +9,8 @@ namespace MusicAppFinal.Models
         Browse,
         About,
         Blog,
-        Videos
+        Videos,
+        Playlist
     }
     public class HomeMenuItem : BaseModel
     {

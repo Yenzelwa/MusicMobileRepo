@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicAppFinal.Views.BlogPage"
-             xmlns:vm="clr-namespace:MusicAppFinal.ViewModels;">
+             xmlns:vm="clr-namespace:MusicAppFinal.ViewModels;"
+             BackgroundColor="#232323">
   <ContentPage.BindingContext>
     <vm:AboutViewModel />
   </ContentPage.BindingContext>

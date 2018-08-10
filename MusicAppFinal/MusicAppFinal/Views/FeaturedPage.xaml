@@ -5,8 +5,8 @@
             xmlns:Controls="clr-namespace:MusicAppFinal.Layout;assembly=HorizontalList"
           
            
-             x:Name="BrowseFeaturedPage">
-
+             x:Name="BrowseFeaturedPage"
+             BackgroundColor="#232323">
     <Grid Padding="10">
        
         <ListView SeparatorVisibility="Default" ItemsSource="{Binding Music}" HasUnevenRows="True" HorizontalOptions="Fill">
@@ -41,14 +41,7 @@
                                         <Label Text="{Binding CollectionTitle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" LineBreakMode="TailTruncation"
                            TextColor="Bisque"/>
                                         <Label Text="{Binding CollectionPrice}" FontSize="12" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center" LineBreakMode="TailTruncation"/>
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="100"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Button Grid.Column="1" Clicked="BtnIncrement_OnClicked" Text="Add ToCart" VerticalOptions="Center" BorderRadius="16" FontSize="10" HeightRequest="34" BorderWidth="0"/>
-                                        </Grid>
+                                
                                     </StackLayout>
                                 </Grid>
                             </Frame>
@@ -72,14 +65,7 @@
                                         <Label Text="{Binding CollectionTitle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" LineBreakMode="TailTruncation"
                            TextColor="Bisque"/>
                                         <Label Text="{Binding CollectionPrice}" FontSize="12" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center" LineBreakMode="TailTruncation"/>
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="100"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Button Grid.Column="1" x:Name="test" Clicked="BtnIncrement_OnClicked" Text="Add ToCart" VerticalOptions="Center" BorderRadius="16" FontSize="10" HeightRequest="34" BorderWidth="0"/>
-                                        </Grid>
+                                  
                                     </StackLayout>
                                 </Grid>
                             </Frame>

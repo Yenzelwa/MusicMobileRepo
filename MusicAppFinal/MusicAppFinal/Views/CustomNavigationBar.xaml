@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MusicAppFinal.Views.CustomNavigationBar">
+             x:Class="MusicAppFinal.Views.CustomNavigationBar"
+             BackgroundColor="#232323">
     <ContentView.Content>
-        <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="#F44336">
+        <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="#232323">
             <Grid.RowDefinitions>
                 <RowDefinition Height="44"></RowDefinition>
                 <RowDefinition Height="1"></RowDefinition>

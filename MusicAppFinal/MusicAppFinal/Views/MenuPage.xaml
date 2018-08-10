@@ -5,10 +5,11 @@
           
          
     Title="{Binding Title}"
-    Icon="{Binding Icon}">
-  
-    <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand">
+    Icon="{Binding Icon}"
+             >
+
+    <ContentPage.Content BackgroundColor="#232323">
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#232323">
             <ListView 
                 CachingStrategy="RecycleElement"
                 SeparatorColor="Transparent"

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
-             x:Class="MusicAppFinal.Views.MyMusicPage">
-	<StackLayout Spacing="20" Padding="15">
-        <Button Text="Play" Clicked="PlayStop_Clicked" x:Name="PlayStop"></Button>
-        <forms:VideoView WidthRequest="360" HeightRequest="220">
-            
-        </forms:VideoView>
-    </StackLayout>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:mypages="clr-namespace:MusicAppFinal.Views.MusicLibrary"
+            x:Class="MusicAppFinal.Views.MyMusicPage"
+            BackgroundColor="#232323">
+    <TabbedPage.Children>
+        <mypages:PlaylistPage Title="Playlists"/>
+        <mypages:ArtistPage Title="Albums"/>
+        <mypages:PlaylistPage Title="Artists"/>
+        <mypages:ArtistPage Title="Songs"/>
+        <mypages:ArtistPage Title="Videos"/>
+        
+    </TabbedPage.Children>
+</TabbedPage>

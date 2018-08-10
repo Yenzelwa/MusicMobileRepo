@@ -14,6 +14,8 @@ namespace MusicAppFinal.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+           // Rg.Plugins.Popup.Popup.Init(this, bundle);
             VideoViewRenderer.Init();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

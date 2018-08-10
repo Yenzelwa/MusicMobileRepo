@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MusicAppFinal.Views"
-             x:Class="MusicAppFinal.Views.MusicDetailPage">
+             x:Class="MusicAppFinal.Views.MusicDetailPage"
+             BackgroundColor="#232323">
   
      <Grid>
          <Grid.RowDefinitions>
@@ -10,36 +11,30 @@
              <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <local:AspectRatioContainer AspectRation="200">
-        <Image Aspect="AspectFill" Source="IMG_0078.JPG"  HorizontalOptions="Fill"  HeightRequest="260"/>
-        </local:AspectRatioContainer>
-        <Frame  Grid.Row="1" BackgroundColor="White"  HasShadow="True"  Margin="20,-40,20,50" >
-            <Label Margin="0,25"
-               Text="My name is Scott Hanselman."
-               LineBreakMode="WordWrap"/>
-            <Label Margin="0,25"
-               Text="My name is Scott Hanselman."
-               LineBreakMode="WordWrap"/>
-            <Button Text="Add to cart"></Button>
-            <Button Text="Procced"></Button>
+      
+
+            <local:AspectRatioContainer AspectRation="200">
+                <Image Aspect="AspectFill" Source="IMG_0078.JPG"  HorizontalOptions="Fill"  HeightRequest="260"/>
+            </local:AspectRatioContainer>
+            <Frame   BackgroundColor="White"  HasShadow="True"  Margin="20,40,20,40" >
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                        <Button    TextColor="White" Text="Play" BackgroundColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                        <Button  TextColor="White"  Clicked="Payment_Clicked"  Text="R 19.99" BackgroundColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
             </Frame>
 
+      
+        
       
 
         <StackLayout Grid.Row="2" Padding="5,0,5,5" Spacing="2">
     
             <Label Text="Song name " VerticalOptions="Center" HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
-
-            <Label Text="Song name " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
-
-            <Label Text="Song name  " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
-            <Label Text="Song name  " VerticalOptions="Center"  HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
                            TextColor="Black" FontAttributes="Bold"/>
             <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
 

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicAppFinal.Views.NewItemPage"            
              xmlns:local="clr-namespace:MusicAppFinal.Views"
-		Title="New Item">
+		Title="New Item"
+             BackgroundColor="#232323">
 
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="Save" Clicked="Save_Clicked" />

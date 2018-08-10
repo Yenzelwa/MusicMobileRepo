@@ -7,7 +7,7 @@ using Plugin.MediaManager.Abstractions.Enums;
 
 namespace MusicAppFinal.Views
 {
-	public partial class MyMusicPage : ContentPage
+	public partial class MyMusicPage : TabbedPage
 	{
 		ItemDetailViewModel viewModel;
 
@@ -24,19 +24,19 @@ namespace MusicAppFinal.Views
 
 			BindingContext = this.viewModel = viewModel;
 		}
-        private void PlayStop_Clicked(object sender, EventArgs e)
-        {
-            if(PlayStop.Text=="Play")
-            {
-                CrossMediaManager.Current.Play(videoUrl,MediaFileType.Video);
-                PlayStop.Text = "Stop";
-            }
-            else if(PlayStop.Text=="Stop")
-            {
-                CrossMediaManager.Current.Stop();
-                PlayStop.Text = "Play";
-            }
+        //private void PlayStop_Clicked(object sender, EventArgs e)
+        //{
+        //    if(PlayStop.Text=="Play")
+        //    {
+        //        CrossMediaManager.Current.Play(videoUrl,MediaFileType.Video);
+        //        PlayStop.Text = "Stop";
+        //    }
+        //    else if(PlayStop.Text=="Stop")
+        //    {
+        //        CrossMediaManager.Current.Stop();
+        //        PlayStop.Text = "Play";
+        //    }
 
-        }
+        //}
 	}
 }
