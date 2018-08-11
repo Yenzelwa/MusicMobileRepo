@@ -1,0 +1,17 @@
+﻿ContentPage {
+    background-color: #eedd82;
+    /*padding-top: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;*/
+}
+Stacklayout {
+    background-color: transparent;
+    padding: 20%;
+} 
+Label {  
+    text-align: center;  
+    color:black;  
+    font-size: 30%;  
+    font-style: italic;  
+}  
