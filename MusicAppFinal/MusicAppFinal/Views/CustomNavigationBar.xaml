@@ -2,7 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicAppFinal.Views.CustomNavigationBar"
-             BackgroundColor="#232323">
+             BackgroundColor="#f20424">
     <ContentView.Content>
         <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="#232323">
             <Grid.RowDefinitions>

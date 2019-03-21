@@ -2,65 +2,184 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MusicAppFinal.Views"
-             x:Class="MusicAppFinal.Views.MusicDetailPage"
-             BackgroundColor="#232323">
-  
-     <Grid>
-         <Grid.RowDefinitions>
-             <RowDefinition Height="Auto"></RowDefinition>
-             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-      
+             x:Class="MusicAppFinal.Views.MusicDetailPage">
+ 
+    <ScrollView  Padding="0">
 
-            <local:AspectRatioContainer AspectRation="200">
-                <Image Aspect="AspectFill" Source="IMG_0078.JPG"  HorizontalOptions="Fill"  HeightRequest="260"/>
-            </local:AspectRatioContainer>
-            <Frame   BackgroundColor="White"  HasShadow="True"  Margin="20,40,20,40" >
-                <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                        <Button    TextColor="White" Text="Play" BackgroundColor="Black"/>
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand">
+
+                <Grid x:Name="GridMoviesDetail" 
+                      IsVisible="False" 
+                      AbsoluteLayout.LayoutFlags="All" 
+                      AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" Padding="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Margin="0"
+                                   x:Name="ImgDetail"  
+                                   Grid.Column="0" 
+                                   HeightRequest="180"
+                                   WidthRequest="300"/>
+                            <StackLayout HeightRequest="200" Grid.Column="1" >
+                                <Label x:Name="LblMovieName"  TextColor="#E91E63" FontAttributes="Bold"/>
+                                <Label x:Name="LblLanguage" />
+                            <Label x:Name="LblType" />
+                            <Label x:Name="LblPrice"/>
+                                <Button x:Name="BtnTrailor" Text="Purchase"
+                                        BackgroundColor="#048c0d" TextColor="White"
+                                        Clicked="BtnTrailor_OnClicked"/>
+                            </StackLayout>
+                        
+                    </Grid>
+                    </Frame>
+
+
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Description"
+                               HorizontalTextAlignment="Center"
+                               TextColor="#E91E63" 
+                               FontAttributes="Bold"/>
+                        <Label x:Name="LblDescription"></Label>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                        <Button  TextColor="White"  Clicked="Payment_Clicked"  Text="R 19.99" BackgroundColor="Black"/>
+
+
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Songs" 
+                               HorizontalTextAlignment="Start" 
+                               TextColor="#E91E63" 
+                               FontAttributes="Bold"/>
+                    <StackLayout>
+                        
+                      
                     </StackLayout>
+                    <Frame Grid.Row="0" Padding="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text=">"
+                                       BackgroundColor="White" TextColor="Black"                                    
+                                         WidthRequest="10"
+                                     Grid.Column="0" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="1" >
+                                <Label Text="Songs one" 
+                                   HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Duration}"/>
+                                <Button  Text="R 5.99"
+                                        BackgroundColor="White" TextColor="Black"
+                                         HorizontalOptions="EndAndExpand" 
+                                         Clicked="BtnTrailor_OnClicked"
+                                         BorderColor="#048c0d"
+                                         />
+                            </StackLayout>
+                            
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="1" Padding="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text=">"
+                                       BackgroundColor="White" TextColor="Black"                                    
+                                         WidthRequest="10"
+                                     Grid.Column="0" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="1" >
+                                <Label Text="Songs one" 
+                                   HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Duration}"/>
+                                <Button  Text="R 5.99"
+                                        BackgroundColor="White" TextColor="Black"
+                                         HorizontalOptions="EndAndExpand" 
+                                         Clicked="BtnTrailor_OnClicked"
+                                          BorderColor="#048c0d"
+                                         />
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="2" Padding="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text=">"
+                                       BackgroundColor="White" TextColor="Black"                                    
+                                         WidthRequest="10"
+                                     Grid.Column="0" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="1" >
+                                <Label Text="Songs one" 
+                                   HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Duration}"/>
+                                <Button  Text="R 5.99"
+                                        BackgroundColor="White" TextColor="Black"
+                                         HorizontalOptions="EndAndExpand" 
+                                         Clicked="BtnTrailor_OnClicked"
+                                          BorderColor="#048c0d"
+                                         />
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="3" Padding="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text=">"
+                                       BackgroundColor="White" TextColor="Black"                                    
+                                         WidthRequest="10"
+                                     Grid.Column="0" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="1" >
+                                <Label Text="Songs one" 
+                                   HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Duration}"/>
+                                <Button  Text="R 5.99"
+                                        BackgroundColor="White" TextColor="Black"
+                                         HorizontalOptions="EndAndExpand" 
+                                         Clicked="BtnTrailor_OnClicked"
+                                          BorderColor="#048c0d"
+                                         />
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+
                 </StackLayout>
 
-            </Frame>
+                </Grid>
 
-      
-        
-      
+                <StackLayout x:Name="SLLoader" IsVisible="True" Padding="12"
+                             AbsoluteLayout.LayoutFlags="PositionProportional"
+                             AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
 
-        <StackLayout Grid.Row="2" Padding="5,0,5,5" Spacing="2">
-    
-            <Label Text="Song name " VerticalOptions="Center" HorizontalOptions="Start" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-            <Button  Text="Play" VerticalOptions="Center" HorizontalOptions="End" BorderRadius="16" FontSize="10" HeightRequest="34" WidthRequest="30" BorderWidth="0"/>
+                    <ActivityIndicator IsRunning="True" Color ="#80000000"/>
 
-        </StackLayout>
+                    <Label Text="Loading..." HorizontalOptions="Center" TextColor="Red"/>
 
+                </StackLayout>
+            </AbsoluteLayout>
 
-    </Grid>
-    <!--<StackLayout Orientation="Vertical" Spacing="10" Padding="10">
-            <Image Aspect="AspectFill" Source="IMG_0078.JPG" Margin="-10,-10,-10,0" MinimumHeightRequest="90"/>
-
-
-            <Label Margin="0,25"
-               Text="My name is Scott Hanselman. I'm a programmer, teacher, and speaker. I work out of my home office in Portland, Oregon for the Web Platform Team at Microsoft, but this blog, its content and opinions are my own. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web."
-               LineBreakMode="WordWrap"/>
-
-            <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="CenterAndExpand"
-                     Spacing="10">
-
-                <Image x:Name="twitter" Source="twitter.png"/>
-                <Image x:Name="facebook" Source="facebook.png"/>
-                <Image x:Name="instagram" Source="instagram.png"/>
-            </StackLayout>
-
-        </StackLayout>-->
-
+        </ScrollView>
+   
 </ContentPage>
 
 

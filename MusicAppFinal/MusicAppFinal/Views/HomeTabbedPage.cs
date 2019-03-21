@@ -15,17 +15,17 @@ namespace MusicAppFinal.Views
                 Title = "FEATURED",
                         Icon = Device.OnPlatform<string>("tab_feed.png", null, null)
                     });
-            Children.Add(new BlogPage()
-            {
-                Title = "BLOG",
-                Icon = Device.OnPlatform<string>("tab_about.png", null, null)
-            });
-            Children.Add(new MyMusicPage()
-            {
-                Title = "MY MUSIC",
-                Icon = Device.OnPlatform<string>("tab_about.png", null, null)
+            //Children.Add(new BlogPage()
+            //{
+            //    Title = "BLOG",
+            //    Icon = Device.OnPlatform<string>("tab_about.png", null, null)
+            //});
+            //Children.Add(new MyMusicPage()
+            //{
+            //    Title = "MY MUSIC",
+            //    Icon = Device.OnPlatform<string>("tab_about.png", null, null)
 
-            });
+            //});
 
 
 

@@ -4,76 +4,52 @@
              x:Class="MusicAppFinal.Views.FeaturedPage" 
             xmlns:Controls="clr-namespace:MusicAppFinal.Layout;assembly=HorizontalList"
           
-           
-             x:Name="BrowseFeaturedPage"
-             BackgroundColor="#232323">
-    <Grid Padding="10">
-       
-        <ListView SeparatorVisibility="Default" ItemsSource="{Binding Music}" HasUnevenRows="True" HorizontalOptions="Fill">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell >
-                        <Grid x:Name="gridLayout" Padding="5,0,5,5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="0"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnTapped_ViewMusic"/>
-                            </StackLayout.GestureRecognizers>
-                            <Frame  Padding="1" BackgroundColor="White" HasShadow="True" OutlineColor="#bbb" BindingContext="{Binding Item1}"  >
+             x:Name="BrowseFeaturedPage">
+    
+
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+        <StackLayout x:Name="SLMovies" IsVisible="False" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+            <ListView x:Name="MovieListView" HasUnevenRows="True" SeparatorVisibility="Default" ItemSelected="MovieListView_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                            <Frame Grid.Row="0" Padding="0" BackgroundColor="WhiteSmoke" HasShadow="True"> 
                                 <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="100"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                    <Frame BackgroundColor="White"  HasShadow="False" Padding="0" Margin="0" >
-                                        <Image Source="{Binding CollectionImage}" Aspect="AspectFill"
-                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
-                                    </Frame>
-                                       
-                                    <StackLayout Grid.Row="1" Padding="5,0,5,5" Spacing="2">
-
-                                        <Label Text="{Binding CollectionArtistName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-                                        <Label Text="{Binding CollectionTitle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" LineBreakMode="TailTruncation"
-                           TextColor="Bisque"/>
-                                        <Label Text="{Binding CollectionPrice}" FontSize="12" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center" LineBreakMode="TailTruncation"/>
-                                
+                                    <Image Source="{Binding LogoFile}" Grid.Column="0" />
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="{Binding MovieName}"  TextColor="#E91E63" FontAttributes="Bold"/>
+                                        <Label Text="{Binding ShowTime}"/>
+                                        <Label Text="{Binding MovieType}"/>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                            <Label Text="{Binding RatedPGI}"/>
+                                            <Label HorizontalOptions="EndAndExpand" Text="{Binding Duration}"/>
+                                        </StackLayout>
                                     </StackLayout>
                                 </Grid>
                             </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout x:Name="SLLoader" IsVisible="True" Padding="12"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
 
-                            <Frame Grid.Column="2"  Padding="1" BackgroundColor="White" HasShadow="True" OutlineColor="#bbb" BindingContext="{Binding Item2}"  >
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="100"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
+            <ActivityIndicator IsRunning="True" Color ="#80000000"/>
 
-                                    <Frame BackgroundColor="White"  HasShadow="False" Padding="0" Margin="0" >
-                                        <Image Source="{Binding CollectionImage}" Aspect="AspectFill"
-                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
-                                    </Frame>
+            <Label Text="Loading..." HorizontalOptions="Center" TextColor="Red"/>
 
-                                    <StackLayout Grid.Row="1" Padding="5,0,5,5" Spacing="2">
-
-                                        <Label Text="{Binding CollectionArtistName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16" LineBreakMode="TailTruncation" 
-                           TextColor="Black" FontAttributes="Bold"/>
-                                        <Label Text="{Binding CollectionTitle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" LineBreakMode="TailTruncation"
-                           TextColor="Bisque"/>
-                                        <Label Text="{Binding CollectionPrice}" FontSize="12" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center" LineBreakMode="TailTruncation"/>
-                                  
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

@@ -10,14 +10,13 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MusicAppFinal.Droid</RootNamespace>
     <AssemblyName>MusicAppFinal.Android</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidTlsProvider>
@@ -213,6 +212,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\videoplayback.3gpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Bladeposter.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Bladeposter.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Bladeposter.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Bladeposter.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Bladeposter.png" />
   </ItemGroup>
   <Import Project="..\MusicAppFinal\MusicAppFinal.projitems" Label="Shared" Condition="Exists('..\MusicAppFinal\MusicAppFinal.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\AlbumModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MusicDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NowPlaying.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PersonViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MusicDetailViewModel.cs" />
@@ -113,6 +114,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)images\Bladeposter.png" />
     <Content Include="$(MSBuildThisFileDirectory)images\IMG_0074.JPG" />
     <Content Include="$(MSBuildThisFileDirectory)images\IMG_0078.JPG" />
     <Content Include="$(MSBuildThisFileDirectory)images\IMG_0308.JPG" />

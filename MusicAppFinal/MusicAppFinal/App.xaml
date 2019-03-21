@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MusicAppFinal.App" >
-  <Application.Resources >
-        <ResourceDictionary>
-            <Color x:Key="Primary">#232323</Color>
-            <Color x:Key="PrimaryDark">#232323</Color>
-            <Color x:Key="Accent">#232323</Color>
-            <Color x:Key="LightBackgroundColor">#232323</Color>
-            <Color x:Key="DarkBackgroundColor">#232323</Color>
-            <Color x:Key="MediumGrayTextColor">#232323</Color>
-            <Color x:Key="LightTextColor">#232323</Color>
+    <Application.Resources>
 
+        <!-- Application resource dictionary -->
+
+        <ResourceDictionary>
+
+            <!-- Styles -->
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="White" />
-                <Setter Property="BarTextColor" Value="Black" />
+                <Setter Property="BarBackgroundColor" Value="#f20424"/>
+                <Setter Property="BarTextColor" Value="White"/>
             </Style>
+            <!-- Styles -->
+
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>
