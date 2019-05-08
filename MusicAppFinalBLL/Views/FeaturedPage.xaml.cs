@@ -8,7 +8,6 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using ImageWrapLayout;
 using System.Net;
-using MusicAppFinal.BLL.Library;
 
 namespace MusicAppFinal.Views
 {
@@ -129,10 +128,11 @@ namespace MusicAppFinal.Views
                 };
                 movies.Add(movie5);
 
+               
 
-
-               // var response = await Library.GetLibrary();
-                MovieListView.ItemsSource = movies;
+                var response = await client.GetStringAsync("http://localhost:58806/api/library");
+                var library = JsonConvert.DeserializeObject<List<LibraryViewModel>>(response);
+                MovieListView.ItemsSource = library;
                 SLMovies.IsVisible = true;
 
             }

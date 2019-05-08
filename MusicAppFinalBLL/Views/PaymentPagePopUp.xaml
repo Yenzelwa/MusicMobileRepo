@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAppFinal.Views.PaymentPagePopUp"
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 BackgroundColor="#232323">
+    <StackLayout Margin="12"
+                 Padding="24"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Image Source="IMG_0074.JPG" Aspect="AspectFill"
+                           HorizontalOptions="Fill" VerticalOptions="Fill"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="Song Name"  FontSize="25"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="R 19.99" FontSize="15"  />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="By tapping 'Buy', you accept the following terms of service :"  />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="End">
+                <Button  TextColor="White"    Text="Continue" BackgroundColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</pages:PopupPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAppFinal.Views.LoginPage">
+    <Grid RowSpacing="2" BackgroundColor="#232323">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1"  Padding="2" HeightRequest="150">
+            <Image Source="IMG_0078.JPG"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                  <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid RowSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid  Grid.Column="1" RowSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label TextColor="White" Text="UserName" HorizontalOptions="Center" FontAttributes="Bold" FontSize="12" Grid.Row="1" Opacity="0.5"></Label>
+                    <Entry HorizontalTextAlignment="Center" Grid.Row="2" TextColor="White" FontSize="12"></Entry>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid  Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Password" HorizontalOptions="Center" TextColor="White" Grid.Row="1" Opacity="0.5" FontAttributes="Bold" FontSize="12"></Label>
+                    <Entry  TextColor="White" IsPassword="True" HorizontalTextAlignment="Center" Grid.Row="2" FontSize="12"></Entry>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <Button Text="Sign In" TextColor="White" FontSize="12" Clicked="Login_Clicked" BorderRadius="20" HeightRequest="50" FontAttributes="Bold" BackgroundColor="Red"/>
+                    <Label Grid.Row="1" TextColor="White" FontSize="12" VerticalOptions="EndAndExpand" Text="Don't have an account?" HorizontalOptions="Start"/>
+                    <Label Grid.Row="1" TextColor="White" FontSize="12" VerticalOptions="EndAndExpand" Text="Sign Up! " HorizontalOptions="End"/>
+                </Grid>
+            </Grid>
+        
+        </Grid>
+    </Grid>
+</ContentPage>

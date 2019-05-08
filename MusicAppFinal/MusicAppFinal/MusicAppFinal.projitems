@@ -27,12 +27,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\Library\Library.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controller\MusicAppNavigationPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Layout\HorizontalList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Layout\LayoutData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Layout\WrapLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\HomeMenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LibraryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Music.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AlbumModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
@@ -40,6 +42,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\NowPlaying.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PersonViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SongModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LibraryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MusicDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MusicViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AspectRatioContainer.cs" />

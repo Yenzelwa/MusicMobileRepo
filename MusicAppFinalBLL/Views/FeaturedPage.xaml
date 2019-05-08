@@ -24,14 +24,14 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="{Binding LogoFile}" Grid.Column="0" />
+                                        <Image Source="{Binding CoverFilePath}" Grid.Column="0" />
                                     <StackLayout Grid.Column="1">
-                                        <Label Text="{Binding MovieName}"  TextColor="#E91E63" FontAttributes="Bold"/>
-                                        <Label Text="{Binding ShowTime}"/>
-                                        <Label Text="{Binding MovieType}"/>
+                                            <Label Text="{Binding Name}"  TextColor="#E91E63" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Artist}"/>
+                                            <Label Text="{Binding Type}"/>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                            <Label Text="{Binding RatedPGI}"/>
-                                            <Label HorizontalOptions="EndAndExpand" Text="{Binding Duration}"/>
+                                                <Label Text="{Binding Price}"/>
+                                                <Label HorizontalOptions="EndAndExpand" Text="{Binding DateCreated}"/>
                                         </StackLayout>
                                     </StackLayout>
                                 </Grid>

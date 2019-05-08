@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using MusicAppFinal.Models;
 using MusicAppFinal.ViewModels;
 using Newtonsoft.Json;
-using Plugin.MediaManager;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -45,7 +44,7 @@ namespace MusicAppFinal.Views
                     LogoFile = "Bladeposter.png",
                     MovieId = 5,
                     MovieLanguage = "R & B",
-                    MovieName = "2Umphako",
+                    MovieName = "Umphako",
                     MoviePrint = "1",
                     MovieType = "Horror, Mystery, Thriller",
                     RatedPGI = "PG 13",
@@ -54,41 +53,6 @@ namespace MusicAppFinal.Views
                     TrailorLink = "https://www.youtube.com/embed/DzfpyUB60YY"
 
                 };
-                var songs = new List<SongModel>();
-                var song = new SongModel
-                {
-                    Id = 1,
-                    Name = "Umama",
-                    FilePath = "ererwe",
-                    Price = 50
-                };
-                songs.Add(song);
-                var song1 = new SongModel
-                {
-                    Id = 1,
-                    Name = "Izitha",
-                    FilePath = "ererwe",
-                    Price = 10
-                };
-                songs.Add(song1);
-                var song2 = new SongModel
-                {
-                    Id = 1,
-                    Name = "Abangani",
-                    FilePath = "ererwe",
-                    Price = 20
-                };
-                songs.Add(song2);
-                var song3 = new SongModel
-                {
-                    Id = 1,
-                    Name = "Intombi",
-                    FilePath = "ererwe",
-                    Price = 30
-                };
-                songs.Add(song3);
-
-
 
                 LblMovieName.Text = movies.MovieName;
                 LblType.Text = movies.MovieType;
@@ -98,8 +62,6 @@ namespace MusicAppFinal.Views
                 LblDescription.Text = movies.Description;
                 ImgDetail.Source = "Bladeposter.png";
                 trailorUrl = movies.TrailorLink;
-
-                SongListView.ItemsSource = songs;
                 GridMoviesDetail.IsVisible = true;
 
 
@@ -132,22 +94,6 @@ namespace MusicAppFinal.Views
         {
             PopupNavigation.Instance.PushAsync(new PaymentPagePopUp());
 
-        }
-        private bool _isClicked = false;
-        private void TapPausePlay_OnTapped(object sender, EventArgs e)
-        {
-            if (_isClicked)
-            {
-                CrossMediaManager.Current.PlaybackController.Play();
-              //  ImgPausePlay.Source = ImageSource.FromFile("pause.png");
-                _isClicked = false;
-            }
-            else
-            {
-                CrossMediaManager.Current.Pause();
-               // ImgPausePlay.Source = ImageSource.FromFile("play.png");
-                _isClicked = true;
-            }
         }
     }
 }
