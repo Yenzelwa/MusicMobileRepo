@@ -12,7 +12,7 @@ namespace MusicAppFinal.BLL.Library
 {
     public class Library
     {
-        public static async Task<List<LibraryModel>> GetLibrary()
+        public static async Task<LibraryResponse> GetLibrary()
         {
          
 
@@ -22,7 +22,7 @@ namespace MusicAppFinal.BLL.Library
                 // Call asynchronous network methods in a try/catch block to handle exceptions
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://localhost:61450/api/sports");
+                    HttpResponseMessage response = await client.GetAsync("http://igagasimediaweb.co.za/api/library");
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
                     // Above three lines can be replaced with new helper method below
@@ -37,7 +37,7 @@ namespace MusicAppFinal.BLL.Library
                         }
                     }
 
-                    var data = JsonConvert.DeserializeObject<List<LibraryModel>>(responseBody);
+                    var data = JsonConvert.DeserializeObject<LibraryResponse>(responseBody);
                     return data;
                 }
                 catch (HttpRequestException e)
@@ -45,7 +45,7 @@ namespace MusicAppFinal.BLL.Library
                     Console.WriteLine("\nException Caught!");
                     Console.WriteLine("Message :{0} ", e.Message);
 
-                    return new List<LibraryModel>();
+                    return new LibraryResponse();
                 }
 
                 // var client = new HttpClient();
@@ -65,6 +65,41 @@ namespace MusicAppFinal.BLL.Library
                 // request.AddHeader("cache-control", "no-cache");
                 // request.AddHeader("content-type", "text/xml");
                 //  var response =  client.Execute(request);
+
+            }
+        }
+        public static async Task<LibraryDetailResponse> GetLibraryDetail(long libraryId)
+        {
+
+
+
+            using (HttpClient client = new HttpClient())
+            {
+                // Call asynchronous network methods in a try/catch block to handle exceptions
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync($"http://igagasimediaweb.co.za/api/library/detail/{libraryId}");
+                    response.EnsureSuccessStatusCode();
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(responseBody);
+                    if (response.StatusCode != HttpStatusCode.OK)
+                    {
+                        if (response.StatusCode != HttpStatusCode.Accepted)
+                        {
+                            //  throw new Exception(response.StatusDescription, new Exception(response.Content));
+                        }
+                    }
+
+                    var data = JsonConvert.DeserializeObject<LibraryDetailResponse>(responseBody);
+                    return data;
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine("\nException Caught!");
+                    Console.WriteLine("Message :{0} ", e.Message);
+
+                    return new LibraryDetailResponse();
+                }
 
             }
         }

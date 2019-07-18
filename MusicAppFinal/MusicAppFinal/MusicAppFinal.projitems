@@ -32,9 +32,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Layout\HorizontalList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Layout\LayoutData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Layout\WrapLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ApiLibraryDetail.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\HomeMenuItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\LibraryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ApiLibrary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LibraryDetailResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LibraryResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Music.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AlbumModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
