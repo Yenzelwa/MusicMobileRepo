@@ -98,7 +98,7 @@ namespace MusicAppFinal.Views
                 return;
 
             //pop to root for Windows Phone
-            if (Detail != null && Device.RuntimePlatform == Device.WinPhone)
+            if (Detail != null && Device.RuntimePlatform == Device.macOS)
             {
                 await Detail.Navigation.PopToRootAsync();
             }

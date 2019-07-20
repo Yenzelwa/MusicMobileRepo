@@ -1,9 +1,8 @@
 ﻿
 using MusicAppFinal.ViewModels;
-using Plugin.MediaManager;
 using System;
 using Xamarin.Forms;
-using Plugin.MediaManager.Abstractions.Enums;
+
 
 namespace MusicAppFinal.Views
 {

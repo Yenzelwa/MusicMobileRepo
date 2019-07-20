@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MusicAppFinal.Views"
+             xmlns:viewModels="clr-namespace:MusicAppFinal.Models" 
              x:Class="MusicAppFinal.Views.MusicDetailPage">
+    <ContentPage.BindingContext>
+        <viewModels:ApiLibraryDetail></viewModels:ApiLibraryDetail>
+    </ContentPage.BindingContext>
  
     <ScrollView  Padding="0">
 
@@ -65,33 +69,36 @@
                                FontAttributes="Bold"/>
 
                     <StackLayout Grid.Row="0" Padding="0"   AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-
+                        <ProgressBar x:Name="PbAudio"/>
 
                         <ListView x:Name="SongListView" HasUnevenRows="True" SeparatorVisibility="Default">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout>
+                                            
 
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="0.5*"/>
                                                     <ColumnDefinition Width="*"/>
                                                 </Grid.ColumnDefinitions>
-                                                <Image Grid.Column="0" x:Name="ImgPausePlay" Source="play.png" HeightRequest="20" WidthRequest="20">
+                                                <Image Grid.Column="0"  Source="play.png" HeightRequest="20" WidthRequest="20">
+                                                    
                                                     <Image.GestureRecognizers>
-                                                        <TapGestureRecognizer x:Name="TapPausePlay" Tapped="TapPausePlay_OnTapped"></TapGestureRecognizer>
+                                                        <TapGestureRecognizer x:Name="TapPausePlay" Tapped="TapPausePlay_OnTapped" ></TapGestureRecognizer>
                                                     </Image.GestureRecognizers>
                                                 </Image>
                                                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="1" >
-                                                    <Label Text="{Binding Name}" 
+                                                    <Label  Text="{Binding Name}"  
                                    HorizontalTextAlignment="Center" />
-                                                    <Button  Text="{Binding Price}"
+                                                    <Button  Text="{Binding Price, StringFormat='{0:C2}'}" 
                                          BackgroundColor="White" TextColor="Black"
                                          HorizontalOptions="EndAndExpand" 
                                         
                                          BorderColor="#048c0d"      
                                          />
+           
                                                 </StackLayout>
 
                                             </Grid>
